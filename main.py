@@ -6,7 +6,7 @@ while inp_error == True:
     try:
         no_tikets_req = int(input('Сколько билетов хотите приобрести: '))
     except ValueError as e:
-        print('Введите количество билетов цифрами') #Быквы вместо цифр
+        print('Введите количество билетов цифрами') #Буквы вместо цифр
     else:
         if no_tikets_req <= 0: #количество меньше 1
             print('Количество билетов не может быть меньше 1')
@@ -20,7 +20,7 @@ for tiket_no in range(1, no_tikets_req + 1):
             print('Введите возраст посетителя ', tiket_no, ': ', end="")
             tiket_age = float(input())
         except ValueError as e:
-            print('Введите возраст цифрами') #Быквы вместо цифр
+            print('Введите возраст цифрами') #Буквы вместо цифр
         else:
             if tiket_age < 0:   #возраст  меньше 0
                 print('Возраст не может быть меньше 0')
@@ -32,6 +32,7 @@ for tiket_no in range(1, no_tikets_req + 1):
         total_price += 990
     else:
         total_price += 1390
+        
 #Применяем скидку на колличество человек
 if no_tikets_req > 3:
     total_price *= 0.9
